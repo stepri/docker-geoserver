@@ -8,11 +8,11 @@ ENV JAVA_OPTS -Xms128m -Xmx512m -XX:MaxPermSize=512m
 ENV ADMIN_PASSWD geoserver
 
 RUN apt-get install -qqy unzip && \
-    wget -c https://downloads.sourceforge.net/projects/geoserver/GeoServer/2.12.0/geoserver-2.12.0-bin.zip \
-         -O /tmp/geoserver-2.12.0-bin.zip && \
-    unzip /tmp/geoserver-2.12.0-bin.zip -d /opt && \
+    wget -c https://downloads.sourceforge.net/projects/geoserver/GeoServer/2.6.2/geoserver-2.6.2-bin.zip \
+         -O /tmp/geoserver-2.6.2-bin.zip && \
+    unzip /tmp/geoserver-2.6.2-bin.zip -d /opt && \
     cd /opt && \
-    ln -s geoserver-2.12.0 geoserver
+    ln -s geoserver-2.6.2 geoserver
 
 ADD 01_geoserver.sh /etc/my_init.d/01_geoserver.sh
 RUN chmod +x /etc/my_init.d/01_geoserver.sh
