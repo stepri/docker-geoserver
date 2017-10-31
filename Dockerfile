@@ -8,7 +8,7 @@ ENV JAVA_OPTS -Xms128m -Xmx512m -XX:MaxPermSize=512m
 ENV ADMIN_PASSWD geoserver
 
 RUN apt-get install -qqy unzip && \
-    wget -c https://downloads.sourceforge.net/projects/geoserver/GeoServer/2.6.2/geoserver-2.6.2-bin.zip \
+    wget -c https://downloads.sourceforge.net/project/geoserver/GeoServer/2.6.2/geoserver-2.6.2-bin.zip \
          -O /tmp/geoserver-2.6.2-bin.zip && \
     unzip /tmp/geoserver-2.6.2-bin.zip -d /opt && \
     cd /opt && \
